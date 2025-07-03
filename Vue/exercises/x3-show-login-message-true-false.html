@@ -1,4 +1,4 @@
-<!--Button that counts how many times it's clicked-->
+<!--Show a login message only if a flag is true-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,19 +6,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>x2</title>
+    <title>x3</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app">
-        <button @click="count++">{{ count }}</button>
+        <button @click="isLoggedIn = !isLoggedIn">click me</button>
+        <p>{{ isLoggedIn ? 'You are logged in' : 'You are logged out' }}</p>
     </div>
 <script>
-    let count = 0;
     Vue.createApp({
         data() {
             return {
-                count
+                isLoggedIn : false
             }
         }
     }).mount('#app');
