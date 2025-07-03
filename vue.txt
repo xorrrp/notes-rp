@@ -1,0 +1,20 @@
+Vue.js
+
+Core Concepts
+-------------
+[concept] - [what it does] - ie: []
+
+{{ }} - output data - ie: {{ message }}
+v-model - two way binding - ie: <input v-model="name">
+v-bind - binds attributes - ie: <img v-bind:src="imgURL"> / :src="imgURL"
+v-on - event listener - ie: <button v-on:click="doThing"> / @click="doThing"
+v-if / v-show - conditional rendering - ie: <p v-if="loggedIn">Welcome!</p>
+v-for - looping - ie: <li v-for="item in items">{{ item }}</li>
+
+More Concepts
+-------------
+
+v-show - toggle visibility of element - ie: <div v-show="lightSwitch">words</div>
+       # you can code a button with v-on:click="lightSwitch = !lightSwitch" / @click=""
+       # lightSwitch changing states from true/false will view/hide the element
+ 
