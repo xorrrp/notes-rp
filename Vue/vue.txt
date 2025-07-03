@@ -7,19 +7,29 @@ Vue.createApp({    #
         return {   # inside return{} is where the reactive state is defined
 		   # every key-value pair here becomes reactive
 	}	   # vue will update the DOM upon any changes here
-    }              #  
+    },             # 
+    methods: {     #
+                   # ie: addTask() {}
+    }  
 }).mount('')       # vue apps are mounted to html elements - ie: .mount('body') / .mount('#app')
+
 
 Core Concepts
 -------------
 [concept] - [what it does] - ie: []
 
 {{ }} - output data - ie: {{ message }}
-      # 
+      # this is text interpolation
+      # simple javascript expressions can also be written inside
+
 v-model - two way binding - ie: <input v-model="name">
+
 v-bind - binds attributes - ie: <img v-bind:src="imgURL"> / :src="imgURL"
+
 v-on - event listener - ie: <button v-on:click="doThing"> / @click="doThing"
+
 v-if / v-show - conditional rendering - ie: <p v-if="loggedIn">Welcome!</p>
+
 v-for - looping - ie: <li v-for="item in items">{{ item }}</li>
 
 More Concepts
