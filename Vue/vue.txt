@@ -1,10 +1,21 @@
 Vue.js
 
+Structure
+---------
+Vue.createApp({    #
+    data() {	   #
+        return {   # inside return{} is where the reactive state is defined
+		   # every key-value pair here becomes reactive
+	}	   # vue will update the DOM upon any changes here
+    }              #  
+}).mount('')       # vue apps are mounted to html elements - ie: .mount('body') / .mount('#app')
+
 Core Concepts
 -------------
 [concept] - [what it does] - ie: []
 
 {{ }} - output data - ie: {{ message }}
+      # 
 v-model - two way binding - ie: <input v-model="name">
 v-bind - binds attributes - ie: <img v-bind:src="imgURL"> / :src="imgURL"
 v-on - event listener - ie: <button v-on:click="doThing"> / @click="doThing"
