@@ -37,10 +37,18 @@ v-if / v-show - conditional rendering - ie: <p v-if="loggedIn">Welcome!</p>
 
 v-for - looping - ie: <li v-for="item in items">{{ item }}</li>
 
+
 More Concepts
 -------------
-
 v-show - toggle visibility of element - ie: <div v-show="lightSwitch">words</div>
        # you can code a button with v-on:click="lightSwitch = !lightSwitch" / @click=""
        # lightSwitch changing states from true/false will view/hide the element
- 
+
+
+Vue SFC from CLI - Vite
+-----------------------
+# npm init vue@latest
+- cd into vue app directory after creating project
+# npm install - install dependencies
+# npm run dev - start dev server
+
