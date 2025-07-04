@@ -13,7 +13,7 @@
 <div id="app">
     <p v-if="isCelToFah">{{celToFah}}&deg; Fahrenheit</p>
     <p v-else>{{fahToCel}}&deg; Celsius</p>
-    <input type="number" v-model="temp" placeholder="0&deg;" /> <br><br>
+    <input type="number" v-model.number="temp" placeholder="0&deg;" /> <br><br>
     <button @click="isCelToFah = !isCelToFah">click to switch conversion</button>
 </div>
 <script>
