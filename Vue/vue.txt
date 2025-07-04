@@ -2,13 +2,13 @@ Vue.js
 
 Structure
 ---------
-Vue.createApp({    #
-    data() {	   #
+Vue.createApp({    
+    data() {	   
         return {   # inside return{} is where the reactive state is defined
 		   # every key-value pair here becomes reactive
 	}	   # vue will update the DOM upon any changes here
-    },             # 
-    methods: {     #
+    },              
+    methods: {     
                    # ie: addTask() {}
     }  
 }).mount('')       # vue apps are mounted to html elements - ie: .mount('body') / .mount('#app')

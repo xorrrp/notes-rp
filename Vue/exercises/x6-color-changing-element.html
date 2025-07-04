@@ -11,21 +11,21 @@
 </head>
 <body>
 <div id="app">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-    <button @click="getRandomColor">
-        click
-    </button>
+    <div :style="{ backgroundColor: bgColor }">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <button @click="getRandomColor">click for a random background color</button>
+    </div>
 </div>
 <script>
     Vue.createApp({
         data() {
             return {
-            
+                bgColor : '#fff'
             }
         },
         methods: {
             getRandomColor() {
-                document.getElementById('app').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+                this.bgColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
             }
         }
     }).mount('#app');
