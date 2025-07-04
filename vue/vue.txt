@@ -7,10 +7,15 @@ Vue.createApp({
         return {   # inside return{} is where the reactive state is defined
 		   # every key-value pair here becomes reactive
 	}	   # vue will update the DOM upon any changes here
+    },
+    computed: {    # computed properties are written like methods 
+                   # they are updated automatically when a dependency changes
+                   # useful to output something that depends on something else  
     },              
-    methods: {     
-                   # ie: addTask() {}
-    }  
+    methods: {     # unlike computed properties, methods need to be called on, ie: through event handling
+                   # declared like methods in a js object
+    }              # ie: addTask() {...} called by -> <button @click="addTask">add</button>
+  
 }).mount('')       # vue apps are mounted to html elements - ie: .mount('body') / .mount('#app')
 
 
