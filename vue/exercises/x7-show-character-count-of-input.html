@@ -11,14 +11,19 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" v-model="inputText">
-    <p> Character count: {{ inputText.length }} </p>
+    <input type="text" v-model="text">
+    <p>Character count: {{ textLength }}</p>
 </div>
 <script>
     Vue.createApp({
         data() {
             return {
-                inputText: 0
+                text : ''
+            }
+        },
+        computed: {
+            textLength() {
+                return this.text.length
             }
         }
     }).mount('#app');
