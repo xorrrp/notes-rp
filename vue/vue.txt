@@ -1,4 +1,4 @@
-Vue.js
+Vue.js             # cdn <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 Structure
 ---------
@@ -10,7 +10,7 @@ Vue.createApp({
     },
     computed: {    # computed properties are written like methods 
                    # they are updated automatically when a dependency changes
-                   # useful to output something that depends on something else  
+                   # ie:   
     },              
     methods: {     # unlike computed properties, methods need to be called on, ie: through event handling
                    # declared like methods in a js object

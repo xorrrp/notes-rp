@@ -1,0 +1,38 @@
+<!--Create a celsius/fahrenheit temperature converter-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>x8</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="isCelToFah">{{celToFah}}&deg; Fahrenheit</p>
+    <p v-else>{{fahToCel}}&deg; Celsius</p>
+    <input type="number" v-model="temp" placeholder="0&deg;" /> <br><br>
+    <button @click="isCelToFah = !isCelToFah">click to switch conversion</button>
+</div>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                temp : 0,
+                isCelToFah : true
+            }
+        },
+        computed: {
+            celToFah() {
+                return Math.round((this.temp * 9/5) + 32);
+            },
+            fahToCel() {
+                return Math.round((this.temp - 32) * 5/9);
+            }
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>
