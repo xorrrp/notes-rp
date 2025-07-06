@@ -5,8 +5,12 @@ Structure
 Vue.createApp({    
     data() {	   
         return {   # inside return{} is where the reactive state is defined
-		   # every key-value pair here becomes reactive
-	}	   # vue will update the DOM upon any changes here
+		           # every key-value pair here becomes reactive
+	    }      	   # vue will update the DOM upon any changes here
+    },
+    watch: {       # watchers are methods "watching" a data property
+                   # these methods are not called on, they watch data and execute if a condition is met
+                   # ie: watching a registration form - actively updating, displaying whether user has each field correctly inputted
     },
     computed: {    # computed properties are written like methods 
                    # they are updated automatically when a dependency changes
@@ -75,9 +79,10 @@ Styling
 -------
 - inline - ie: <div v-bind:style="{ backgroundColor: 'orange', 'font-weight': 'bolder' }">
     - camelCase for properties is preferred - kebab-case does work if written inside quotes
-- internal/external - ie: <div v-bind:class="{  }"
-
-
+- internal/external - ie: <div v-bind:class="{  }"></div>
+- scoped - styling in components stays local
+    - ie: <style scoped></style> contains all styles locally instead of globally
+    - .container/.wrapper can be styled as unique classes if each <style> is scoped
 
 
 
