@@ -37,16 +37,26 @@ v-bind - binds attributes - ie: <img v-bind:src="imgURL"> / :src="imgURL"
 
 v-on - event listener - ie: <button v-on:click="doThing"> / @click="doThing"
 
-v-if / v-show - conditional rendering - ie: <p v-if="loggedIn">Welcome!</p>
+v-if - conditional rendering - ie: <p v-if="loggedIn">Welcome!</p>
+     # this element is added/removed from the DOM - rendered conditionally
+
+v-show - toggle visibility - ie: <p v-show="show">Hello World</p>
+       # this element is always rendered - css controls visibility (ie: display: none)
+       # useful for repetitive toggling - ie: dropdown menu
 
 v-for - looping - ie: <li v-for="item in items">{{ item }}</li>
+      # <p v-for="(item, index) in items"></p> allows for accessing {{ index }} of array element
+          # best practice is adding :key="index" to help vue keep track of which item is which in the loop & avoid bugs
 
-
-More Concepts
--------------
 v-show - toggle visibility of element - ie: <div v-show="lightSwitch">words</div>
        # you can code a button with v-on:click="lightSwitch = !lightSwitch" / @click=""
        # lightSwitch changing states from true/false will view/hide the element
+
+
+Concepts Cont.
+-------------
+v-if vs v-show - both control visibility in very different ways
+               # v-if - conditional rendering
 
 
 Vue SFC from CLI - Vite
@@ -85,6 +95,25 @@ Styling
     - .container/.wrapper can be styled as unique classes if each <style> is scoped
 
 
+Lifecycle Hooks
+----------------
+mounted - called right after a component is added to the DOM
+
+beforeCreate
+
+
+Structure Cont.
+----------------
+watch: {
+    deep: true - used when watching a nested object/array and want to watch changes within
+               # normally, watchers only trigger by direct reference changes - ie: redefining an array
+               # internal mutation (ie: push to array) does not trigger the watcher without deep: true
+}
+
+
+Packages
+---------
+vue-i18n - multilingual web app support
 
 
 

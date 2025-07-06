@@ -1,9 +1,10 @@
 <template>
     <div class="container">
-        <input v-model="newTask.title" placeholder="Wash the dishes...">
+        <input v-model="newTask.title" maxlength="25" placeholder="Task...">
+        <span>{{charCounter}} / 25</span> <br>
         <select v-model="newTask.category">
-            <option>Work</option>
             <option>Personal</option>
+            <option>Work</option>
             <option>Other</option>
         </select>
         <button @click="addTask">Add</button>
@@ -12,7 +13,10 @@
                 <span :style="{ textDecoration: task.completed ? 'line-through' : 'none'}">
                     {{task.title}} [{{task.category}}]
                 </span>
-                <button @click="toggleTask(index)">✔️</button>
+                <button @click="toggleTask(index)">
+                    <span v-if="task.completed">☑️</span>
+                    <span v-else>✔️️</span>
+                </button>
                 <button @click="removeTask(index)">🗑️</button>
             </li>
         </ul>
@@ -45,6 +49,11 @@ export default {
             deep: true
         }
     },
+    computed: {
+        charCounter() {
+            return (this.newTask.title.trim() ? this.newTask.title.trim().length : 0)
+        }
+    },
     methods: {
         addTask() {
             if (this.newTask.title.trim()) {
@@ -63,8 +72,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .container {
-        color: royalblue;
+        color: #fff;
+    }
+    button, select {
+        cursor: pointer;
     }
 </style>

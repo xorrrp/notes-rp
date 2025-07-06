@@ -1,0 +1,14 @@
+JavaScript
+
+Concepts
++-------+
+localStorage - Web API object - part of Web Storage API - storage object built into browser
+             - useful for persisting ui preference (ie: dark theme) or client-side cart on reload
+             - localStorage is similar to a php cookie - both live in browser, holding key-value data
+
+
+Libraries
+---------
+Chart.js - very easy graphing
+
+
