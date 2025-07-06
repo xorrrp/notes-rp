@@ -1,11 +1,14 @@
 <template>
-    <div>
+    <div class="container">
         <input v-model="calcDisplay" disabled>
-        <button v-for="num in nums" @click="inputNum($event)">{{num}}</button>
-        <button v-for="op in operators" @click="inputOp($event)">{{op}}</button>
-        <button @click="calculate">=</button>
-        <button @click="calcDisplay=''">C</button>
-        <button @click="backspace">&larr;</button>
+        <div class="btn-container">
+            <button @click="calcDisplay=''">C</button>
+            <button @click="calculate">=</button>
+            <button @click="backspace">&larr;</button>
+            <button v-for="num in nums" @click="inputNum($event)">{{num}}</button>
+            <button v-for="op in operators" @click="inputOp($event)">{{op}}</button>
+
+        </div>
     </div>
 </template>
 
@@ -14,18 +17,15 @@ export default {
     data() {
         return {
             calcDisplay : '',
-            nums : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-            operators : ['+', '-', '*', '/']
+            nums : ['7', '8', '9', '4', '5', '6', '1', '2', '3', '.', '0'],
+            operators : ['*', '+', '-', '/']
         }
-    },
-    computed: {
     },
     methods: {
         inputNum(event) {
             this.calcDisplay += event.target.innerText;
         },
         inputOp(event) {
-            let operation = event.target.innerText;
             this.calcDisplay += event.target.innerText;
         },
         calculate() {
@@ -38,3 +38,30 @@ export default {
 }
 </script>
 
+<style>
+.container {
+    width: 200px;
+    border: solid 2px #fff;
+    padding: 5px;
+}
+.container input {
+    text-align: right;
+    display: flex;
+    justify-self: center;
+    color: #000;
+}
+.btn-container {
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.btn-container button {
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-container button:hover {
+    background-color: beige;
+}
+</style>
