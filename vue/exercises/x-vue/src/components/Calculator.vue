@@ -1,20 +1,8 @@
 <template>
     <div>
         <input v-model="calcDisplay" disabled>
-        <button @click="inputNum($event)">1</button>
-        <button @click="inputNum($event)">2</button>
-        <button @click="inputNum($event)">3</button>
-        <button @click="inputNum($event)">4</button>
-        <button @click="inputNum($event)">5</button>
-        <button @click="inputNum($event)">6</button>
-        <button @click="inputNum($event)">7</button>
-        <button @click="inputNum($event)">8</button>
-        <button @click="inputNum($event)">9</button>
-        <button @click="inputNum($event)">0</button>
-        <button @click="inputSymbol($event)">+</button>
-        <button @click="inputSymbol($event)">-</button>
-        <button @click="inputSymbol($event)">*</button>
-        <button @click="inputSymbol($event)">/</button>
+        <button v-for="num in nums" @click="inputNum($event)">{{num}}</button>
+        <button v-for="op in operators" @click="inputOp($event)">{{op}}</button>
         <button @click="calculate">=</button>
         <button @click="calcDisplay=''">C</button>
         <button @click="backspace">&larr;</button>
@@ -25,7 +13,9 @@
 export default {
     data() {
         return {
-            calcDisplay : ''
+            calcDisplay : '',
+            nums : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+            operators : ['+', '-', '*', '/']
         }
     },
     computed: {
@@ -34,7 +24,7 @@ export default {
         inputNum(event) {
             this.calcDisplay += event.target.innerText;
         },
-        inputSymbol(event) {
+        inputOp(event) {
             let operation = event.target.innerText;
             this.calcDisplay += event.target.innerText;
         },
