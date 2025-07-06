@@ -52,3 +52,43 @@ Vue SFC from CLI - Vite
 # npm install - install dependencies
 # npm run dev - start dev server
 
+
+Single File Components (SFC)
+----------------------------
+- all .vue files consist of <template>, <script> and <style>
+    - template for html code
+    - script for vue code
+    - style for css code
+
+
+Components
+----------
+- stored inside /src/components, as .vue files, in PascalCase
+- components work as reusable pieces of code, encapsulating elements of ui
+    - great for organization and scalability
+- ie: UserCard.vue is a component that displays a card with a name and bio
+    - components can accept parent data through props, optimizing reusability while DRY
+    - passing props to a card component streamlines building ui - very noticeably as the app grows
+
+
+Styling
+-------
+- inline - ie: <div v-bind:style="{ backgroundColor: 'orange', 'font-weight': 'bolder' }">
+    - camelCase for properties is preferred - kebab-case does work if written inside quotes
+- internal/external - ie: <div v-bind:class="{  }"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
