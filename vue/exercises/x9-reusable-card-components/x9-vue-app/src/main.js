@@ -1,9 +1,0 @@
-import './assets/main.css'
-
-import { createApp } from 'vue'
-import App from './App.vue'
-import UserCard from './components/UserCard.vue'
-
-const app = createApp(App)
-app.component('user-card', UserCard)
-app.mount('#app')
