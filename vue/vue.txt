@@ -75,6 +75,15 @@ Single File Components (SFC)
     - style for css code
 
 
+main.js
+--------
+- main.js is responsible for:
+    importing vue # import { createApp } from 'vue'
+    creating the app # import App from './App.vue' | const app = createApp(App)
+    mounting it to a DOM element # app.mount('#app')
+    setting up global plugins, routers, stores, etc.
+
+
 Components
 ----------
 - stored inside /src/components, as .vue files, in PascalCase

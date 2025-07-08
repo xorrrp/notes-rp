@@ -1,8 +1,22 @@
 CSS
 
+Grid + Flexbox
+--------------
+main/inline axis - vertical
+cross/block axis - horizontal
+    - grid axis is strict, flex axis is variable
+    # ie: grid-auto-flow: column; -> grid axis does not get flipped
+    # ie: flex-direction: column; -> flex axis does get flipped
+
+justify-content - aligns the whole row of items inside a container
+
 Flexbox
------
+-------
 
 
 Grid
------
+----
+justify-items - aligns each item inside its own grid cell horizontally
+align-items - aligns each item inside its own grid cell vertically
+    shorthand:
+        # place-items: center; -> justify-items: center; + align-items: center;

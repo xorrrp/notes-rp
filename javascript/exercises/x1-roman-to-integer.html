@@ -1,0 +1,88 @@
+<!--Given a roman numeral, convert it to an integer-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>x1</title>
+</head>
+<body>
+
+<label for="input">Convert roman numeral to integer:</label>
+<input id="input" type="text" placeholder="" maxlength="15"></input>
+<button onclick="updateOutput()">Submit</button>
+<p id="output"></p>
+
+<script>
+    const I = 1;
+    const V = 5;
+    const X = 10;
+    const L = 50;
+    const C = 100;
+    const D = 500;
+    const M = 1000;
+    
+    input.addEventListener("input", function () {
+        this.value = this.value.toUpperCase();
+    });
+    document.getElementById('input').addEventListener('input', function () {
+        this.value = this.value.replace(/[^IVXLCDM]/gi, '');
+    });
+    
+    
+    let output = document.getElementById('output');
+    output.textContent = '';
+    
+    function updateOutput() {
+        output.textContent = convertRomanToInt();
+    }
+    
+    function convertRomanToInt() {
+        let romanInput = document.getElementById('input').value.trim().toUpperCase();
+        let romanArr = romanInput.split('');
+        
+        
+        if (romanInput.length == 1) {
+            return getIntValue(romanInput);
+        }
+        
+        else if (romanInput.length == 2) {
+            console.log(romanInput);
+        }
+    }
+    
+    function getIntValue(romanInput) {
+        switch (romanInput) {
+            case 'I':
+                return 1;
+                break;
+            case 'V':
+                return 5;
+                break;
+            case 'X':
+                return 10;
+                break;
+            case 'L':
+                return 50;
+                break;
+            case 'C':
+                return 100;
+                break;
+            case 'D':
+                return 500;
+                break;
+            case 'M':
+                return 1000;
+                break;
+            default:
+                return 0;
+        }
+    }
+    
+    
+    
+</script>
+</body>
+</html>

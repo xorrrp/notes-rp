@@ -9,6 +9,7 @@ localStorage - Web API object - part of Web Storage API - storage object built i
 
 Libraries
 ---------
-Chart.js - very easy graphing
+Chart.js - very easy graphing # <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         # best practice keeping <canvas> in its own container for responsiveness
 
 
