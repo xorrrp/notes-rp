@@ -61,7 +61,7 @@ v-if vs v-show - both control visibility in very different ways
 
 Vue SFC from CLI - Vite
 -----------------------
-# npm init vue@latest
+# npm create vite@latest
 - cd into vue app directory after creating project
 # npm install - install dependencies
 # npm run dev - start dev server
@@ -94,14 +94,26 @@ Components
     - passing props to a card component streamlines building ui - very noticeably as the app grows
 
 
+Dynamic Components
+-------------------
+- used for displaying only specific components in the SPA
+- <component :is=""> is used to represent the active component with the value/name tied to v-bind:is
+
+
 Styling
--------
+--------
 - inline - ie: <div v-bind:style="{ backgroundColor: 'orange', 'font-weight': 'bolder' }">
     - camelCase for properties is preferred - kebab-case does work if written inside quotes
 - internal/external - ie: <div v-bind:class="{  }"></div>
 - scoped - styling in components stays local
     - ie: <style scoped></style> contains all styles locally instead of globally
     - .container/.wrapper can be styled as unique classes if each <style> is scoped
+
+
+Routing
+--------
+
+
 
 
 Lifecycle Hooks

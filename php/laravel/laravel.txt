@@ -1,0 +1,14 @@
+Laravel
+
+Routing
+--------
+- all routes are defined in /routes # auto load + config from bootstrap/app.php
+# routes/web.php - defines routes for web interface
+# routes/api.php - for stateless api - enable api routing with: php artisan install:api
+
+
+Middleware
+-----------
+- a convenient mechanism for inspecting+filtering HTTP requests entering your app
+    # ie: verify user auth - if not auth then redirect to login
+

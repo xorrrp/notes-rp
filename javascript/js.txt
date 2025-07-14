@@ -1,10 +1,14 @@
-JavaScript
+JavaScript [+]
 
-Concepts
-+-------+
-localStorage - Web API object - part of Web Storage API - storage object built into browser
+Web APIs
+---------
+localStorage - store, read, add, modify and delete data items stored in browser with no expiration date
              - useful for persisting ui preference (ie: dark theme) or client-side cart on reload
              - localStorage is similar to a php cookie - both live in browser, holding key-value data
+
+fetch - make HTTP requests to web server from web browser
+      - based on async and await - fetch returns a promise
+      - best used for simple json api
 
 
 Libraries

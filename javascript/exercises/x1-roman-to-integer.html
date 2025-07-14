@@ -23,6 +23,7 @@
     const C = 100;
     const D = 500;
     const M = 1000;
+    let intOutput = 0;
     
     input.addEventListener("input", function () {
         this.value = this.value.toUpperCase();
@@ -43,6 +44,9 @@
         let romanInput = document.getElementById('input').value.trim().toUpperCase();
         let romanArr = romanInput.split('');
         
+        romanArr.forEach(num => {
+            console.log(num);
+        });
         
         if (romanInput.length == 1) {
             return getIntValue(romanInput);
