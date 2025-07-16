@@ -1,0 +1,30 @@
+JSON - JavaScript Object Notation
+----------------------------------
+- text format for storing & transporting data
+- plain text written in JS object notation
+- language independent - code for reading & generating JSON exists in various languages
+- extremely lightweight & easy to read - whitespaces are ignored
+
+Values
+-------
+- string - ie: "name": "Luke"
+- number - ie: "age": 25
+- object - ie: "user": {"name": "Luke", "age": 25, "id": "LE10019449"}
+- array  - ie: "allergy": ["peanut", "pumpkin", "lobster"]
+- boolean- ie: "isAdmin": true
+- null   - ie: "middleName": null
+
+Syntax
+-------
+- data is in name/value pairs
+    # consists of a field name in double quotes, followed by a colon, followed by a value
+    # ie: "name":"Simon" / "age":35
+- data is seperated by commas
+- curly braces hold objects
+- square brackets hold arrays
+
+JavaScript
+-----------
+built in functions:
+# JSON.parse() - convert JSON string to JS object
+# JSON.stringify() - convert JS object to JSON string
