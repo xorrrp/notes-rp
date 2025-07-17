@@ -56,7 +56,8 @@ v-show - toggle visibility of element - ie: <div v-show="lightSwitch">words</div
 Concepts Cont.
 -------------
 v-if vs v-show - both control visibility in very different ways
-               # v-if - conditional rendering
+               # v-if - element will not render in DOM if condition is false
+               # v-show - display/hide with css - element is in DOM regardless
 
 
 Vue SFC from CLI - Vite
@@ -110,15 +111,24 @@ Styling
     - .container/.wrapper can be styled as unique classes if each <style> is scoped
 
 
+Refs
+-----
+- refers to specific DOM elements - ref attribute on a html tag adds the element to the $refs object
+- ref attribute & $refs object work as an alternative to JS methods like getElementById() or querySelector()
+    # ie:
+
+
 Routing
 --------
 
 
 
-
 Lifecycle Hooks
 ----------------
-mounted - called right after a component is added to the DOM
+mounted - called right after a component is added to the DOM - options api
+    # from vue2, good for small projects - not optimal
+onMounted - called right after a component is added to the DOM - composition api
+    # from vue3, more flexible and scalable - cleaner in <script setup> & for organizing logic by feature
 
 beforeCreate
 

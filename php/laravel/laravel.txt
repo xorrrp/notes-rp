@@ -6,6 +6,9 @@ Routing
 # routes/web.php - defines routes for web interface
 # routes/api.php - for stateless api - enable api routing with: php artisan install:api
 
+Route::[HTTP verb]($uri, $callback);
+    # get/post/put/patch/delete/options
+
 
 Middleware
 -----------

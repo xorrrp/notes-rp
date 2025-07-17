@@ -1,4 +1,4 @@
-JSON - JavaScript Object Notation
+.json - JavaScript Object Notation
 ----------------------------------
 - text format for storing & transporting data
 - plain text written in JS object notation
