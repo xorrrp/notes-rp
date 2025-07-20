@@ -1,5 +1,16 @@
 CSS
 
+
+display:
+--------
+none - hides element from layout
+inline - stays in the same line - only takes up as much space as needed
+block - default of most elements - start on new line and take as much space as available
+inline-block - lets boxes sit side by side (adjacent) like inline elements but allows setting width, height, padding & margin like inline elements
+flex - applies to a parent box - turns parent into flex container and its children into flex items - by default, children act as in-block elements
+grid - applies to a parent box - turns parent into grid container and its children into grid items - mainly used for structured, grid-like layouts
+
+
 Grid + Flexbox
 --------------
 main/inline axis - vertical
