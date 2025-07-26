@@ -1,4 +1,4 @@
-CSS
+.css
 
 
 display:
@@ -11,6 +11,15 @@ flex - applies to a parent box - turns parent into flex container and its childr
 grid - applies to a parent box - turns parent into grid container and its children into grid items - mainly used for structured, grid-like layouts
 
 
+position:
+---------
+static - default
+relative - like static, but allows for using top:, right:, bottom: & left: properties to move the box
+absolute - completely removes box from normal flow
+fixed - like absolute, but doesn't need a parent to control positioning - always fixed and doesn't move on scroll
+sticky - stays in document flow and scrolls normally, but fixed to an assigned position - ie: navbar that follows on scroll
+
+
 Grid + Flexbox
 --------------
 main/inline axis - vertical
@@ -21,13 +30,28 @@ cross/block axis - horizontal
 
 justify-content - aligns the whole row of items inside a container
 
+
 Flexbox
 -------
+flex-wrap: decide whether items will grow to fill the empty space
+    no-wrap
+    wrap
 
+flex: 1 1 auto; shorthand for:
+    flex-grow:
+        default 0
+    flex-shrink:
+        default 1
+    flex-basis:
+        default auto
 
 Grid
 ----
-justify-items - aligns each item inside its own grid cell horizontally
-align-items - aligns each item inside its own grid cell vertically
-    shorthand:
-        # place-items: center; -> justify-items: center; + align-items: center;
+place-items: center; shorthand for:
+    justify-items - aligns each item inside its own grid cell horizontally
+    align-items - aligns each item inside its own grid cell vertically
+
+
+@media
+------
+best practice is to keep at bottom of stylesheet to avoid accidental changes

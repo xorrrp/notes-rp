@@ -23,6 +23,18 @@ Syntax
 - curly braces hold objects
 - square brackets hold arrays
 
+Static/Dynamic Keys
+-------------
+- static keys
+    # use dot-notation
+    # ie: response.data.key
+
+- dynamic keys
+    # use bracket notation or an equivalent
+    # ie: response.data[key] - key being a variable with a dynamically accessed value
+    # if indexing further, continue with dot notation
+    # ie: response.data[key].info.etc
+
 JavaScript
 -----------
 built in functions:

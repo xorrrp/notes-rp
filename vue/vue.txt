@@ -115,11 +115,15 @@ Refs
 -----
 - refers to specific DOM elements - ref attribute on a html tag adds the element to the $refs object
 - ref attribute & $refs object work as an alternative to JS methods like getElementById() or querySelector()
-    # ie:
-
+    # ie: const name = ref(''); - default value of '' in an input field - can pre-seed if need be
+- access value with [ref variable name].value
 
 Routing
 --------
+
+
+Options API & Composition API
+------------------------------
 
 
 
