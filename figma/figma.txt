@@ -1,0 +1,29 @@
+Figma
+------
+
+left sidebar
+-------------
+- aka navigation panel
+- access layers, pages & components
+- F main menu
+    # access preferences/settings & file menu
+    # rename file, move file to different project
+    # view version history
+- file tab
+    # access pages and layers in file
+    # pages section allows moving between pages + adding new ones
+    # layers section displays all layers on canvas for easy management
+- assets tab
+    # provides access to components
+    # components are reusable design elements (like front-end frameworks)
+
+right sidebar
+--------------
+- aka properties panel
+- provides access to info about your designs
+- design tab
+    # view, add, remove or change object properties within your design
+    # with nothing selected, you can change the bg color of canvas or export all content
+    # access local styles and variables, and export settings
+- prototype tab
+    # brb lol
